@@ -13,33 +13,33 @@ const Services = db.services;
 
 const CategoriesData = [
   {
-    name: 'Konrad Lorenz',
+    name: 'Marcello Malpighi',
   },
 
   {
-    name: 'Alfred Wegener',
+    name: 'Ernest Rutherford',
   },
 
   {
-    name: 'Karl Landsteiner',
+    name: 'Ernest Rutherford',
   },
 ];
 
 const DashboardsData = [
   {
-    title: 'Richard Feynman',
+    title: 'Sigmund Freud',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Louis Victor de Broglie',
+    title: 'Edward Teller',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Ludwig Boltzmann',
+    title: 'Hermann von Helmholtz',
 
     // type code here for "relation_many" field
   },
@@ -87,25 +87,25 @@ const PortalsData = [
 
 const ServicesData = [
   {
-    name: 'Albert Einstein',
+    name: 'Sheldon Glashow',
 
-    description: 'Lynn Margulis',
-
-    // type code here for "relation_one" field
-  },
-
-  {
-    name: 'Antoine Laurent Lavoisier',
-
-    description: 'Arthur Eddington',
+    description: 'Alfred Binet',
 
     // type code here for "relation_one" field
   },
 
   {
-    name: 'Wilhelm Wundt',
+    name: 'Jonas Salk',
 
-    description: 'Gustav Kirchhoff',
+    description: 'Rudolf Virchow',
+
+    // type code here for "relation_one" field
+  },
+
+  {
+    name: 'Andreas Vesalius',
+
+    description: 'Werner Heisenberg',
 
     // type code here for "relation_one" field
   },
