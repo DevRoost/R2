@@ -23,6 +23,8 @@ const categoriesRoutes = require('./routes/categories');
 
 const dashboardsRoutes = require('./routes/dashboards');
 
+
+
 const persistent_dataRoutes = require('./routes/persistent_data');
 
 const portalsRoutes = require('./routes/portals');
@@ -108,6 +110,8 @@ app.use(
   passport.authenticate('jwt', { session: false }),
   dashboardsRoutes,
 );
+
+
 
 app.use(
   '/api/persistent_data',
