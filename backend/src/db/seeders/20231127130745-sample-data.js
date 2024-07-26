@@ -13,33 +13,53 @@ const Services = db.services;
 
 const CategoriesData = [
   {
-    name: 'Konrad Lorenz',
+    name: 'Lynn Margulis',
   },
 
   {
-    name: 'Alfred Wegener',
+    name: 'Anton van Leeuwenhoek',
   },
 
   {
-    name: 'Karl Landsteiner',
+    name: 'B. F. Skinner',
+  },
+
+  {
+    name: 'Joseph J. Thomson',
+  },
+
+  {
+    name: 'Claude Bernard',
   },
 ];
 
 const DashboardsData = [
   {
-    title: 'Richard Feynman',
+    title: 'Murray Gell-Mann',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Louis Victor de Broglie',
+    title: 'Max Planck',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Ludwig Boltzmann',
+    title: 'Frederick Gowland Hopkins',
+
+    // type code here for "relation_many" field
+  },
+
+  {
+    title: 'Carl Linnaeus',
+
+    // type code here for "relation_many" field
+  },
+
+  {
+    title: 'Max Delbruck',
 
     // type code here for "relation_many" field
   },
@@ -63,6 +83,18 @@ const PersistentDataData = [
 
     // type code here for "relation_one" field
   },
+
+  {
+    data: 'Recent activity logs',
+
+    // type code here for "relation_one" field
+  },
+
+  {
+    data: 'Bookmarked articles',
+
+    // type code here for "relation_one" field
+  },
 ];
 
 const PortalsData = [
@@ -83,29 +115,57 @@ const PortalsData = [
 
     url: 'https://support.appwizzy.com',
   },
+
+  {
+    name: 'Analytics Portal',
+
+    url: 'https://analytics.appwizzy.com',
+  },
+
+  {
+    name: 'Marketing Portal',
+
+    url: 'https://marketing.appwizzy.com',
+  },
 ];
 
 const ServicesData = [
   {
-    name: 'Albert Einstein',
+    name: 'Richard Feynman',
 
-    description: 'Lynn Margulis',
-
-    // type code here for "relation_one" field
-  },
-
-  {
-    name: 'Antoine Laurent Lavoisier',
-
-    description: 'Arthur Eddington',
+    description: 'Richard Feynman',
 
     // type code here for "relation_one" field
   },
 
   {
-    name: 'Wilhelm Wundt',
+    name: 'Murray Gell-Mann',
 
-    description: 'Gustav Kirchhoff',
+    description: 'Alfred Kinsey',
+
+    // type code here for "relation_one" field
+  },
+
+  {
+    name: 'Jean Baptiste Lamarck',
+
+    description: 'Murray Gell-Mann',
+
+    // type code here for "relation_one" field
+  },
+
+  {
+    name: 'Comte de Buffon',
+
+    description: 'Max von Laue',
+
+    // type code here for "relation_one" field
+  },
+
+  {
+    name: 'Edward Teller',
+
+    description: 'Ernst Haeckel',
 
     // type code here for "relation_one" field
   },
@@ -148,6 +208,28 @@ async function associatePersistentDatumWithUser() {
   if (PersistentDatum2?.setUser) {
     await PersistentDatum2.setUser(relatedUser2);
   }
+
+  const relatedUser3 = await Users.findOne({
+    offset: Math.floor(Math.random() * (await Users.count())),
+  });
+  const PersistentDatum3 = await PersistentData.findOne({
+    order: [['id', 'ASC']],
+    offset: 3,
+  });
+  if (PersistentDatum3?.setUser) {
+    await PersistentDatum3.setUser(relatedUser3);
+  }
+
+  const relatedUser4 = await Users.findOne({
+    offset: Math.floor(Math.random() * (await Users.count())),
+  });
+  const PersistentDatum4 = await PersistentData.findOne({
+    order: [['id', 'ASC']],
+    offset: 4,
+  });
+  if (PersistentDatum4?.setUser) {
+    await PersistentDatum4.setUser(relatedUser4);
+  }
 }
 
 async function associateServiceWithCategory() {
@@ -182,6 +264,28 @@ async function associateServiceWithCategory() {
   });
   if (Service2?.setCategory) {
     await Service2.setCategory(relatedCategory2);
+  }
+
+  const relatedCategory3 = await Categories.findOne({
+    offset: Math.floor(Math.random() * (await Categories.count())),
+  });
+  const Service3 = await Services.findOne({
+    order: [['id', 'ASC']],
+    offset: 3,
+  });
+  if (Service3?.setCategory) {
+    await Service3.setCategory(relatedCategory3);
+  }
+
+  const relatedCategory4 = await Categories.findOne({
+    offset: Math.floor(Math.random() * (await Categories.count())),
+  });
+  const Service4 = await Services.findOne({
+    order: [['id', 'ASC']],
+    offset: 4,
+  });
+  if (Service4?.setCategory) {
+    await Service4.setCategory(relatedCategory4);
   }
 }
 

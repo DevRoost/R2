@@ -125,7 +125,7 @@ export default function LayoutAuthenticated({
           onAsideLgClose={() => setIsAsideLgActive(false)}
         />
         {children}
-       
+
       </div>
     </div>
   );
