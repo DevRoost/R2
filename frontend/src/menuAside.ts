@@ -30,15 +30,21 @@ const menuAside: MenuAsideItem[] = [
     label: 'RediCall',
   },
 
-
-
   {
-    href: 'https://nexus.enleslabs.com/sign-in?target=%2F',
-    target: '_blank',
+    href: '/rediPlot',
+    icon: icon.mdiViewDashboardOutline,
     label: 'RediPlot',
-    icon: icon.mdiFileCode,
-    permissions: 'READ_API_DOCS',
   },
+
+
+
+  // {
+  //   href: 'https://nexus.enleslabs.com/sign-in?target=%2F',
+  //   target: '_blank',
+  //   label: 'RediPlot',
+  //   icon: icon.mdiFileCode,
+  //   permissions: 'READ_API_DOCS',
+  // },
 
 
   // {

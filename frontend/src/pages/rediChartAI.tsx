@@ -44,10 +44,6 @@ const RediChartAI = () => {
     ],
   });
 
-
-  useEffect(() => {
-  
-  })
  
   return (
     <>
